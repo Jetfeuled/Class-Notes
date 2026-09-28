@@ -68,6 +68,35 @@ public class Notes {
         IO.print("Runtime errors are logic errors that are so severe");
         IO.println(" that java stops your program from executing.");
 
+        IO.println("Number Magic");
+        IO.println("------------");
 
+        int number = 10 / 3;
+        int modulus_number = 10 % 3;
+
+        IO.println(number);
+        IO.println(modulus_number);
+        /* modulus is the remainder left after dividing ints.
+         */
+
+        double exponent_number = Math.pow(2,3);
+        IO.println(exponent_number);
+        //string binary = Integer.toBinaryString(14); 
+        //IO.println(binary);
+
+        int big_boi = Integer.MAX_VALUE;
+        IO.println(big_boi);
+
+        int carosel_boi = Integer.MAX_VALUE + 1;
+        IO.println(carosel_boi);
+
+        long bigger_boi = Long.MAX_VALUE;
+        IO.println(bigger_boi);
+
+        double biggest_boi = Double.MAX_VALUE; //floats are doubles
+        IO.println(biggest_boi);
+
+        //default floats are doubles and default ints are ints not longs.
+        
     }
 }
