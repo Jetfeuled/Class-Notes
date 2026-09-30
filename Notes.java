@@ -67,7 +67,7 @@ public class Notes {
         IO.println("Logic errors occur when code doesn't do what it's supposed to.");
         IO.print("Runtime errors are logic errors that are so severe");
         IO.println(" that java stops your program from executing.");
-
+//28SEP26
         IO.println("Number Magic");
         IO.println("------------");
 
@@ -98,5 +98,54 @@ public class Notes {
 
         //default floats are doubles and default ints are ints not longs.
         
-    }
+//30SEP26
+        IO.println(big_boi);
+        long large_boi = Integer.MAX_VALUE + 1L; //this changes the integer into a long because of the 1L as well as it's type long in the variable
+        IO.println(large_boi);
+
+        int x = 42;
+        IO.println(x);
+        x = x + 1;
+        IO.println(x); //x is stored initially as 42 then is updated on previous line to then be stored again.
+
+        int y = (int)42.0; //how to convert other data to other types like double to int in this case
+        IO.println(y);
+
+        x = 42;
+        y = 9001;
+        x = y;
+        IO.println(x);
+        IO.println(y); //this is not how to swap variables.
+
+        x = 42;
+        y = 9001;
+        int z = x;
+        int w = y;
+        y = x;
+        x = w;
+        IO.println(x);
+        IO.println(y); // this is how to swap variables.
+
+        /*
+        type = size (bytes)
+        boolean = 1/8th (a bit)
+        byte = 1
+        short = 2 
+        float/int = 4
+        double/long = 8
+         */
+
+        String s = "well hello there";
+        IO.println(s);
+        s = s.toUpperCase();
+        IO.println(s); // ******* string objects are immutable ******
+        /*  what this means is that when modifying a string to a new value you're not
+         modifying you're creating a new string object the old object exists still till 
+         garbage collector gets it
+        */
+
+        for(int i = 0; i < 10; i++){
+            IO.println("yes");
+         }
+        }
 }
