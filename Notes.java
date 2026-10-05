@@ -147,5 +147,24 @@ public class Notes {
         for(int i = 0; i < 10; i++){
             IO.println("yes");
          }
+
+        /*
+             1) Initialization     2) conditional     4) update
+        for ( int i=0;              i < 10;           i++){
+
+
+                3) body
+                IO.println(i);
+        }
+        Variables made outside the for loop can be used in the body of the for loop but variables created inside the for loop it cannot be used outside the for loop.
+        This is called Scope.
+        Scope is the lifetime of the variable. It's life is closed at the next closed }.
+        */
+       
+//02OCT26
+
+        //out of memory overflow
+        //check out the loops.java file for notes for today
+
         }
 }
