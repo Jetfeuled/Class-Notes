@@ -42,6 +42,10 @@ public class Notes {
 
     }
 
+    public static double loc(int a, int b, int theta){
+        return lawCOS((double)a, (double)b, (double)theta);
+    }
+
     void main() {
         IO.println("These are my notes"); //description of file\
         IO.println("------------------");
@@ -232,6 +236,19 @@ public class Notes {
         double cosine = lawCOS(2, 2, 60);
 
         IO.println(cosine);
+
+
+//07OCT26
+
+         int u = 0;
+         u = u++;
+         u = ++u;
+         IO.println(u);
+
+         loc(2, 3, 4);
+
+        // Scanner console = new Scanner(System.in );
+        //go look at this file
 
         }
 }
