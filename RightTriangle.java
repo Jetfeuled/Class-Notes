@@ -7,6 +7,7 @@ public class RightTriangle {
 
     public static void triangle(){
 
+        IO.print("    ");
         sides();
         bottom();
         IO.println(" ");
@@ -15,23 +16,29 @@ public class RightTriangle {
 
     public static void sides(){
 
-        char vertical = '|';
-        char slant = '\\';
+        String vertical = "|";
+        String slant = "/";
+        for(i = 0; i < 5; i++){
+            String space = " ";
+        }
 
-        IO.println(vertical + slant);
+        IO.println(slant+ space + vertical);
 
-        for(int i = 0; i < 2; i++ )
+        
+
+        /*for(int i = 0; i < 2; i++ )
             IO.print(vertical);
             for (int i = 0; i < 2;i++) {
                 IO.print(" ");
             }
             IO.print(slant);
+            */
 
     }
 
     public static void bottom(){
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             IO.print('_');
             
         }

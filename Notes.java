@@ -1,8 +1,47 @@
 public class Notes {
+    public static int global = 25;    
     public static void method(){
             IO.println("This is a method.");
             
        }
+
+    public static void yes(int size){
+        IO.println(size);
+    }
+
+    public static void yes(){
+        IO.println("This one has no input.");
+    }
+
+    public static void c_squared(){
+
+        double c2 = a_squared(2) + b_squared(2);
+        IO.println(c2);
+
+    }
+
+    public static double a_squared(double a){
+        a = a * a;
+        return a;
+    }
+
+    public static double b_squared(double b){
+        b = b * b;
+        return b;
+    }
+
+    public static void pythag(double a, double b) {
+        double cSquared = Math.pow(a, 2) + Math.pow(b, 2);
+        double c = Math.sqrt(cSquared);
+        IO.println(c);
+        IO.println(cSquared);
+    }
+
+    public static double lawCOS(double a, double b, double degrees){
+        return Math.sqrt(a * a + b * b - 2 * a * b * Math.cos(Math.toRadians(degrees)));
+
+    }
+
     void main() {
         IO.println("These are my notes"); //description of file\
         IO.println("------------------");
@@ -165,6 +204,34 @@ public class Notes {
 
         //out of memory overflow
         //check out the loops.java file for notes for today
+        //checkout righttriangle.java for notes for that day
+
+//05OCT26
+
+        final int SIZE = 20;
+       // SIZE++; if you try to change the variable size when it is final'd it cant change somewhere else other than the original line.
+       //Go read above main for global variable example
+       //Go read file Example.java for example on public static methods
+       //public means that anyone can access it 
+       //static means you can call the method after the class name ex: Notes.method(); calls the method from this file into Example.java or any
+       //other program that is in the same directory.
+
+        yes(6);
+        //go to the top an see how this method is called here in main
+        // overloading is if you call a method with an input then it will call the method with an input but if you don't put an input then it will default to another method
+        //of the same name but with no parameters within ()
+
+        yes();
+
+        c_squared();
+
+        //another way to do above is like this in a single method
+
+        pythag(2, 2);
+
+        double cosine = lawCOS(2, 2, 60);
+
+        IO.println(cosine);
 
         }
 }
