@@ -46,6 +46,9 @@ public class Notes {
         return lawCOS((double)a, (double)b, (double)theta);
     }
 
+
+    }
+
     void main() {
         IO.println("These are my notes"); //description of file\
         IO.println("------------------");
@@ -249,6 +252,21 @@ public class Notes {
 
         // Scanner console = new Scanner(System.in );
         //go look at this file
+
+//09OCT26
+
+        //java has two different type of variables primitive and object
+        //if it has a capital letter it's an object
+
+        //checkout next and have methods on java documentation
+
+        String rev = reverse(input);
+        IO.println(rev);
+
+
+//14OCT26
+
+         
 
         }
 }
