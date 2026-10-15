@@ -47,8 +47,6 @@ public class Notes {
     }
 
 
-    }
-
     void main() {
         IO.println("These are my notes"); //description of file\
         IO.println("------------------");
@@ -265,8 +263,11 @@ public class Notes {
 
 
 //14OCT26
+        
+        //go look at ReverseString.java
+        //go read C ch 4.4
+        //defensive programming "throw"
 
-         
 
         }
 }
