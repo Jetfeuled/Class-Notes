@@ -46,9 +46,53 @@ public class Notes {
         return lawCOS((double)a, (double)b, (double)theta);
     }
 
+    /*public static char letterGrade(int gradeNum){
+        char gradeLetter = 'F';
+        if(gradeNum >= 90){
+            gradeLetter = 'A';
+        }else if(gradeNum >= 80){
+            gradeLetter = 'B';
+        }
+        }else if(gradeNum >= 70){
+            gradeLetter = 'C';
+        }
+        }else if(gradeNum >= 60){
+            gradeLetter = 'D';
+        }
+        else {
+            gradeLetter = 'F';
+        }
+        return gradeLetter;
+    }*/
+
+    public static char letterGrade(int gradeNum){
+        char gradeLetter = ' ';
+        if (gradeNum >= 90) {
+            gradeLetter = 'P';
+        }
+        else{
+            gradeLetter = 'F';
+        }
+
+
+
+        return gradeLetter;
+    }
+
+    public static boolean isInInterval (char start, char end, char check) {
+       if(check < end && start < check){
+            return true;
+       }
+       //the three operators for multiple conditions is && (and) || (or) ^^ (exor)
+       //exor is either as an or BUT NOT BOTH
+       
+       
+        return false;
+    }
+
 
     void main() {
-        IO.println("These are my notes"); //description of file\
+       /*  IO.println("These are my notes"); //description of file\
         IO.println("------------------");
 
 
@@ -60,12 +104,13 @@ public class Notes {
         IO.println("Algorithm = A step-by-step description of how to accomplish a task.");
         IO.println("Program = A list of instructions to be carried out by a computer.");
         //To make notes the backslash is what allows one line notes
+        */
 
         /* to make multiline notes this is 
         how you do it in java 
         */
-        IO.println("------------------");
-        IO.println("\"This is how you input escape characters.\" " );
+        //IO.println("------------------");
+       // IO.println("\"This is how you input escape characters.\" " );
         /* the \ character can be used to input various things in strings.
         Common escape Sequences:
         \t  =  tab character
@@ -73,19 +118,21 @@ public class Notes {
         \"  =  quotation mark
         \\  =  backslash character
         */
+       /* 
         IO.println("This\nproduces 3 lines\nof output.");
         IO.println("------------------");
         IO.println("Binary is in base2 which means it's just two numbers.");
         IO.println("Compiler = A program that translates a computer program written in one language into an equivalent program in another language.");
         IO.println("This can be called going from high language to machine language.");
+        */
         /* Java compiles into Java Bytecodes so that it can be executed
         on many different types of machines then it is compiled into machinecode.
          */
-         IO.println("------------------");
+        // IO.println("------------------");
 
-        IO.println("Java Class Libraries = preexisting java code to assist in writing code.");
-        IO.println("Class = a unit of code that is the basic building block of Java programs.");
-         IO.println("------------------");
+        //IO.println("Java Class Libraries = preexisting java code to assist in writing code.");
+       // IO.println("Class = a unit of code that is the basic building block of Java programs.");
+        // IO.println("------------------");
         /* A basic way of creating a java program is as follows:
 
             public class <name> {
@@ -101,34 +148,34 @@ public class Notes {
         writing the program once instead of over and over again.
         Below we're going to call a new method named 'method'
         */
-        method();
+       // method();
         //methods need to be called to execute.
         //methods have to be made outside of main.
 
-        IO.println("------------------");
+       /*  IO.println("------------------");
         IO.println("Types of Errors:");
         IO.println("Syntax errors occur when you cause bad grammar.");
         IO.println("Logic errors occur when code doesn't do what it's supposed to.");
         IO.print("Runtime errors are logic errors that are so severe");
-        IO.println(" that java stops your program from executing.");
+        IO.println(" that java stops your program from executing.");*/
 //28SEP26
-        IO.println("Number Magic");
+        /*IO.println("Number Magic");
         IO.println("------------");
 
         int number = 10 / 3;
         int modulus_number = 10 % 3;
 
         IO.println(number);
-        IO.println(modulus_number);
+        IO.println(modulus_number);*/
         /* modulus is the remainder left after dividing ints.
          */
 
-        double exponent_number = Math.pow(2,3);
-        IO.println(exponent_number);
+        //double exponent_number = Math.pow(2,3);
+        //IO.println(exponent_number);
         //string binary = Integer.toBinaryString(14); 
         //IO.println(binary);
 
-        int big_boi = Integer.MAX_VALUE;
+       /*  int big_boi = Integer.MAX_VALUE;
         IO.println(big_boi);
 
         int carosel_boi = Integer.MAX_VALUE + 1;
@@ -140,10 +187,10 @@ public class Notes {
         double biggest_boi = Double.MAX_VALUE; //floats are doubles
         IO.println(biggest_boi);
 
-        //default floats are doubles and default ints are ints not longs.
+        //default floats are doubles and default ints are ints not longs.*/
         
 //30SEP26
-        IO.println(big_boi);
+        /*IO.println(big_boi);
         long large_boi = Integer.MAX_VALUE + 1L; //this changes the integer into a long because of the 1L as well as it's type long in the variable
         IO.println(large_boi);
 
@@ -170,7 +217,7 @@ public class Notes {
         IO.println(x);
         IO.println(y); // this is how to swap variables.
 
-        /*
+        
         type = size (bytes)
         boolean = 1/8th (a bit)
         byte = 1
@@ -178,19 +225,19 @@ public class Notes {
         float/int = 4
         double/long = 8
          */
-
+        /* 
         String s = "well hello there";
         IO.println(s);
         s = s.toUpperCase();
-        IO.println(s); // ******* string objects are immutable ******
-        /*  what this means is that when modifying a string to a new value you're not
+        IO.println(s); // ******* string objects are immutable *******
+         what this means is that when modifying a string to a new value you're not
          modifying you're creating a new string object the old object exists still till 
          garbage collector gets it
         */
 
-        for(int i = 0; i < 10; i++){
-            IO.println("yes");
-         }
+        //for(int i = 0; i < 10; i++){
+           // IO.println("yes");
+         //}
 
         /*
              1) Initialization     2) conditional     4) update
@@ -213,7 +260,7 @@ public class Notes {
 
 //05OCT26
 
-        final int SIZE = 20;
+      //  final int SIZE = 20;
        // SIZE++; if you try to change the variable size when it is final'd it cant change somewhere else other than the original line.
        //Go read above main for global variable example
        //Go read file Example.java for example on public static methods
@@ -221,32 +268,32 @@ public class Notes {
        //static means you can call the method after the class name ex: Notes.method(); calls the method from this file into Example.java or any
        //other program that is in the same directory.
 
-        yes(6);
+       // yes(6);
         //go to the top an see how this method is called here in main
         // overloading is if you call a method with an input then it will call the method with an input but if you don't put an input then it will default to another method
         //of the same name but with no parameters within ()
 
-        yes();
+       // yes();
 
-        c_squared();
+       // c_squared();
 
         //another way to do above is like this in a single method
 
-        pythag(2, 2);
+       // pythag(2, 2);
 
-        double cosine = lawCOS(2, 2, 60);
+       // double cosine = lawCOS(2, 2, 60);
 
-        IO.println(cosine);
+        //IO.println(cosine);
 
 
 //07OCT26
 
-         int u = 0;
-         u = u++;
-         u = ++u;
-         IO.println(u);
+         //int u = 0;
+        // u = u++;
+        // u = ++u;
+        // IO.println(u);
 
-         loc(2, 3, 4);
+        // loc(2, 3, 4);
 
         // Scanner console = new Scanner(System.in );
         //go look at this file
@@ -258,8 +305,8 @@ public class Notes {
 
         //checkout next and have methods on java documentation
 
-        String rev = reverse(input);
-        IO.println(rev);
+       // String rev = reverse(input);
+      // IO.println(rev);
 
 
 //14OCT26
@@ -269,5 +316,20 @@ public class Notes {
         //defensive programming "throw"
 
 
+//16OCT26
+
+         //two types of exceptions Unchecked and Checked
+         //Unchecked: Illegal Argument, Null Pointer, Arithmetic exception
+         //Checked: Exception, File Note Found 
+         //all these are checked at compile
+         //methods throws exceptions classes don't
+
+       // for (int i = 100; i > 40; i-=10) {
+         //   IO.println(letterGrade(i));
+        //}
+
+        //IO.println(isInInterval('a', 'z', 'm')); //true
+        //IO.println(isInInterval('a', 'z', 'z'));
+        //IO.println(isInInterval('a', 'z', 'a'));
         }
 }

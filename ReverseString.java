@@ -23,7 +23,9 @@ public class ReverseString {
         String rev = reverse(original);
         //IO.println(original == rev);
         IO.println(original.equalsIgnoreCase(rev)); // original.equals(rev) also works but if you're trying to compare letters where case matters use ignorecase
-
+        //if(!statement){     this is how you state "is not" whatever the statement is as a boolean value
+        //}
+        //you can compound ! in the boolean expression ex: !! is ==
     }
 
     public static String filter(String original, char remove){
@@ -53,7 +55,7 @@ public class ReverseString {
 
         IO.print(filter("A man, a plan, a canal, Panama!", ','));
 
-        
+
         
     }
 }
