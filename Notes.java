@@ -1,5 +1,6 @@
 public class Notes {
-    public static int global = 25;    
+    public static int global = 25; 
+    public static int z = 22;   
     public static void method(){
             IO.println("This is a method.");
             
@@ -332,6 +333,9 @@ public class Notes {
         //IO.println(isInInterval('a', 'z', 'z'));
         //IO.println(isInInterval('a', 'z', 'a'));
 
-        IO.print("Yes this\n me.");
+        //IO.print("Yes this\n me.");
+
+        //z = 42;
+        //IO.print(z);
         }
 }
