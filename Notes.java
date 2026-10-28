@@ -1,3 +1,6 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class Notes {
     public static int global = 25; 
     public static int z = 22;   
@@ -45,6 +48,134 @@ public class Notes {
 
     public static double loc(int a, int b, int theta){
         return lawCOS((double)a, (double)b, (double)theta);
+    }
+
+    public static void average(){
+        Scanner console = new Scanner(System.in);
+        IO.print("Enter number of grades: ");
+        int n = console.nextInt();
+        double total = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            int grade = console.nextInt();
+            total += grade;
+        }
+        //double average = ((int)(total / n * 100 ))/ 100.0;
+        double average = total /n;
+        System.out.printf("%.2f", average); 
+        //this is how you use f in print.
+        //it must be system.out.printf not IO.printf
+        // System.out.printf("%s: %.2f", "average", average)
+        //the %s grabs the first argument then %f grabs the next argument
+
+        //these are ones to know
+        //%s is string
+        //%f floating point (double)
+        //%d decimal base 10 integer value
+        //%n newline this doesn't affect the arguments that are within the printf()
+        //NaN = not a number
+    }
+
+        public static void average2(){
+        Scanner console = new Scanner(System.in);
+        IO.print("Enter grades or \"done\": ");
+        int n = 0;
+        double total = 0;
+        boolean done = false;
+
+        for (;!done;) {
+            if(console.hasNextInt()){
+                total += console.nextInt();
+                n++;
+            }
+            else{
+             String input = console.next();
+             if(input.equalsIgnoreCase("done")){
+                done = true;
+             }
+            /*else{
+                total += Integer.parseInt(input);
+                n++;
+            }*/
+            }
+        }
+        double average = total /n;
+        System.out.printf("%.2f", average); 
+    }   
+
+    public static void average3(){
+        Scanner console = new Scanner(System.in);
+        IO.print("Enter grades or \"done\": ");
+        int n = 0;
+        double total = 0;
+        boolean done = false;
+
+        while (!done) {
+            if(console.hasNextInt()){
+                total += console.nextInt();
+                n++;
+            }
+            else{
+             String input = console.next();
+             if(input.equalsIgnoreCase("done")){
+                done = true;
+             }
+            /*else{
+                total += Integer.parseInt(input);
+                n++;
+            }*/
+            }
+        }
+        double average = total /n;
+        System.out.printf("%.2f", average); 
+    }   
+
+        public static void average4(){
+        Scanner console = new Scanner(System.in);
+        IO.print("Enter grades or \"done\": ");
+        int n = 0;
+        double total = 0;
+        boolean done = false;
+
+        do{
+            if(console.hasNextInt()){
+                total += console.nextInt();
+                n++;
+            }
+            else{
+             String input = console.next();
+             if(input.equalsIgnoreCase("done")){
+                done = true;
+             }
+            /*else{
+                total += Integer.parseInt(input);
+                n++;
+            }*/
+            }
+        } while (!done);
+        double average = total /n;
+        System.out.printf("%.2f", average); 
+    }   
+
+    public static void game(){
+        Scanner console = new Scanner(System.in);
+        Random rand = new Random(12345); //pseudo random number generator. number in () is seed value
+        //if a seed value isn't given java bases the seed value on whatever the unix time is
+        boolean found = false;
+        int guess = -1, mystery = rand.nextInt(100); //gives a random number [0,100)
+        do { 
+            IO.print("Enter a guess: ");
+            guess = console.nextInt();
+            if(guess < mystery){
+                IO.println("Incorrect, guess higher");
+            }
+            else if(guess > mystery){
+                IO.println("Incorrect, guess lower");
+            }
+        } while (guess != mystery);
+        IO.println("Congrats!");
+
     }
 
     /*public static char letterGrade(int gradeNum){
@@ -337,5 +468,13 @@ public class Notes {
 
         //z = 42;
         //IO.print(z);
+
+//28OCT26
+
+        //average();
+        //average2();
+        //average3();
+        //average4();
+        game();
         }
 }
