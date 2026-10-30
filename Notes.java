@@ -222,6 +222,14 @@ public class Notes {
         return false;
     }
 
+    public static void fence(){ //this is a fence post algorithm
+        for (int i = 0; i < 10; i++) {
+            IO.print("|-");
+        }
+        IO.print("|");
+
+    }
+
 
     void main() {
        /*  IO.println("These are my notes"); //description of file\
@@ -475,6 +483,14 @@ public class Notes {
         //average2();
         //average3();
         //average4();
-        game();
+        //game();
+
+
+//31OCT26
+
+        //fence();
+
+        //check Files.java for notes on File I/O notes
+        
         }
 }
