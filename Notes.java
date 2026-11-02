@@ -491,6 +491,9 @@ public class Notes {
         //fence();
 
         //check Files.java for notes on File I/O notes
-        
+
+//02NOV26 
+
+        //check Files.java on how to use try/catch
         }
 }
