@@ -1,3 +1,5 @@
+import java.io.*;
+import java.net.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -231,7 +233,7 @@ public class Notes {
     }
 
 
-    void main() {
+    void main()throws FileNotFoundException, IOException, URISyntaxException{
        /*  IO.println("These are my notes"); //description of file\
         IO.println("------------------");
 
@@ -495,5 +497,18 @@ public class Notes {
 //02NOV26 
 
         //check Files.java on how to use try/catch
+
+
+
+//04NOV26
+
+        //NOT IN THE BOOK
+
+        //URL url = new URL("http://info.cern.ch"); URL is out of date per java 18 so this is how you do it for future proof
+        URI uri = new URI("http://info.cern.ch");
+        Scanner web = new Scanner(uri.toURL().openStream());
+        while(web.hasNextLine()){
+            IO.println(web.nextLine());
+        }
         }
 }
